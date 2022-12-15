@@ -10,11 +10,11 @@ import { setContext } from "@apollo/client/link/context";
 let apiURL;
 
 const urlOrigin = window.location.origin;
+
 if (urlOrigin.includes('localhost'))
   apiURL = 'http://localhost:4000/graphql';
-else if (!urlOrigin.includes('trade-of-kings'))
+else if (urlOrigin.includes('trade-of-kings'))
   apiURL = 'https://54.93.43.110:4000/graphql';
-
 
 const httpLink = createHttpLink({
   uri: apiURL,
