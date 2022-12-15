@@ -8,7 +8,7 @@ import { useErrorsStore } from "../stores/useErrors";
 import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000/graphql",
+  uri: "http://54.93.43.110:4000/graphql",
 });
 
 const errorHandler = onError(({ graphQLErrors }) => {
