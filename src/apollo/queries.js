@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import gql from 'graphql-tag';
 
 export const myUser = gql`
   query {
@@ -7,4 +7,16 @@ export const myUser = gql`
       name
     }
   }
-`
+`;
+
+export const getInventory = gql`
+  query {
+    getInventory {
+      items {
+        amount
+        category
+        name
+      }
+    }
+  }
+`;

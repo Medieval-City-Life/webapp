@@ -1,9 +1,13 @@
 <template>
-  <div class="text-brown bg-primary h-screen pt-10">
+  <Suspense>
+  <div class="text-brown bg-primary h-screen">
     <AppLoginForm v-if="!loggedIn" />
-    <AppDashboard v-else />
+    <AppDashboard v-else>
+      <AppHeader />
+    </AppDashboard>
     <AppError v-if="message"/>
   </div>
+  </Suspense>
 </template>
 
 <script setup>
@@ -14,6 +18,7 @@ import { storeToRefs } from 'pinia';
 import { useUserStore } from './stores/user';
 import { useErrorsStore } from './stores/useErrors';
 import './assets/tailwind.css';
+import AppHeader from './components/AppHeader.vue';
 
 const { loggedIn } = storeToRefs(useUserStore());
 const { message, code } = storeToRefs(useErrorsStore());
@@ -24,7 +29,5 @@ const { message, code } = storeToRefs(useErrorsStore());
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 </style>

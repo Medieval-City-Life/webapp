@@ -1,21 +1,24 @@
 <template lang="">
-  <div>
-    <div class="text-2xl font-bold capitalize">Willkommen {{ user.name }}!</div>
-    <div class="text-xs">ID: {{ user._id }}</div>
-    <AppButton @click="handleLogoutClick">Ausloggen</AppButton>
+  <slot />
+  <div class="text-left ml-3">
+    <div>
+      <div class="text-left mt-4">Inventar</div>
+      <div class="flex flex-row">
+        <div v-for="(item, index) in myInventory" class="ml-3">{{item.name}}</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { useUserStore } from '../stores/user';
-import { storeToRefs } from 'pinia';
+import { ref } from 'vue';
+import apolloClient from '@/plugins/apollo';
+import { getInventory } from '@/apollo/queries';
 
-import AppButton from './AppButton.vue';
+const myInventory = ref()
 
-const { user } = storeToRefs(useUserStore());
-const { logout } = useUserStore();
+await apolloClient.query({
+    query: getInventory
+  }).then(res => myInventory.value = res.data.getInventory.items)
 
-const handleLogoutClick = () => {
-  logout();
-};
 </script>

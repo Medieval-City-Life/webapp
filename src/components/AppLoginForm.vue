@@ -3,7 +3,7 @@
     <div class="flex justify-center" v-if="!register || registrationSuccess">
       <form
         @submit.prevent="onSubmit"
-        class="p-4 bg-secondary border-brown-medium border-4 shadow-2xl"
+        class="p-4 bg-secondary border-brown-medium border-4 shadow-2xl mt-10"
       >
         <input
           type="text"

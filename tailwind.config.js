@@ -10,7 +10,15 @@ module.exports = {
           DEFAULT: "#6A1C18",
           light: "#A60701",
           medium: "#7C4027",
-          veryLight: "#DDCCA5"
+          veryLight: "#DDCCA5",
+        },
+        tok: {
+          100: "#EDDDBC",
+          200: "#DDCCA5",
+          300: "#CDBD9B",
+          500: "#A60701",
+          700: "#6A1C18",
+          900: "#7C4027"
         }
       }
     },
