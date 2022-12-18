@@ -12,8 +12,8 @@ export const myUser = gql`
 export const getInventory = gql`
   query {
     getInventory {
-      items {
-        amount
+      amount
+      itemDef {
         category
         name
       }

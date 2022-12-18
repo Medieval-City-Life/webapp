@@ -20,6 +20,9 @@ module.exports = {
           700: "#6A1C18",
           900: "#7C4027"
         }
+      },
+      fontFamily: {
+        wishbone: ["Wishbone"]
       }
     },
   },

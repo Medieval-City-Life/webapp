@@ -1,24 +1,17 @@
 <template lang="">
   <slot />
-  <div class="text-left ml-3">
-    <div>
-      <div class="text-left mt-4">Inventar</div>
-      <div class="flex flex-row">
-        <div v-for="(item, index) in myInventory" class="ml-3">{{item.name}}</div>
-      </div>
-    </div>
+  <div class="text-left flex">
+    <AppSideNavi />
+    <AppInventory v-if="currentPage === 'inventory'"></AppInventory>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import apolloClient from '@/plugins/apollo';
-import { getInventory } from '@/apollo/queries';
+import AppSideNavi from './AppSideNavi.vue';
+import AppInventory from './AppInventory.vue';
+import { useDashboardStore } from '@/stores/useDashboard';
+import { storeToRefs } from 'pinia';
 
-const myInventory = ref()
-
-await apolloClient.query({
-    query: getInventory
-  }).then(res => myInventory.value = res.data.getInventory.items)
+const { currentPage } = storeToRefs(useDashboardStore())
 
 </script>

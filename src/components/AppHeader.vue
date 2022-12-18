@@ -1,7 +1,7 @@
 <template>
   <div style="background-image: url('../assets/header-bg.jpg')" class="bgImage">
     <div class="bgColor">
-      <div class="h-[9vh] border-tok-700 rounde border-b-8 shadow-2xl text-tok-300">
+      <div class="h-[9vh] border-tok-700 rounde border-b-4 shadow-2xl text-tok-300">
       <div class="ml-3">
         <span class="text-2xl font-bold capitalize">Willkommen {{ user.name }}!</span>
         <AppButton @click="handleLogoutClick" class="ml-3">Ausloggen</AppButton>
@@ -31,7 +31,7 @@ const handleLogoutClick = () => {
     background-image: url('../assets/header-bg.jpg');
   }
 
-  .bgColor {
+  .blackOpacity {
     background-color: rgba(1,1,1, 0.5);
   }
 </style>

@@ -1,12 +1,16 @@
 <template>
   <Suspense>
-  <div class="text-brown bg-primary h-screen">
-    <AppLoginForm v-if="!loggedIn" />
-    <AppDashboard v-else>
-      <AppHeader />
-    </AppDashboard>
-    <AppError v-if="message"/>
-  </div>
+    <div
+      class="text-brown bg-primary h-screen font-wishbone"
+    >
+      <div class="h-[100vh]" style="background-color: rgba(1, 1, 1, 0.0)">
+        <AppLoginForm v-if="!loggedIn" />
+        <AppDashboard v-else>
+          <AppHeader />
+        </AppDashboard>
+        <AppError v-if="message" />
+      </div>
+    </div>
   </Suspense>
 </template>
 
