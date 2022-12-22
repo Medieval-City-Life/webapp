@@ -16,7 +16,22 @@ export const getInventory = gql`
       itemDef {
         category
         name
+        img
       }
+    }
+  }
+`;
+
+export const getMyCommunity = gql`
+  query {
+    getMyCommunity {
+      name
+      owner {
+        name
+      }
+      crest
+      level
+      memberCount
     }
   }
 `;

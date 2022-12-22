@@ -3,7 +3,7 @@
     <div class="h-[85vh] w-[15vw]">
       <AppSideNaviItem :class="[activePage === 1 ? 'bg-primary border-4' : 'hover:bg-primary border-2']" @click="btnClicked('profile')">Profil</AppSideNaviItem>
       <AppSideNaviItem :class="[activePage === 2 ? 'bg-primary border-4' : 'hover:bg-primary border-2']" @click="btnClicked('inventory')">Inventar</AppSideNaviItem>
-      <AppSideNaviItem :class="[activePage === 3 ? 'bg-primary border-4' : 'hover:bg-primary border-2']" @click="btnClicked('city')">Stadt</AppSideNaviItem>
+      <AppSideNaviItem :class="[activePage === 3 ? 'bg-primary border-4' : 'hover:bg-primary border-2']" @click="btnClicked('community')">Gemeinschaft</AppSideNaviItem>
       <AppSideNaviItem :class="[activePage === 4 ? 'bg-primary border-4' : 'hover:bg-primary border-2']" @click="btnClicked('social')">Sozial</AppSideNaviItem>
       <AppSideNaviItem :class="[activePage === 5 ? 'bg-primary border-4' : 'hover:bg-primary border-2']" @click="btnClicked('settings')" >Einstellungen</AppSideNaviItem>
     </div>
@@ -30,7 +30,7 @@ const btnClicked = (target) => {
     case 'inventory': 
       activePage.value = 2;
       break;
-    case 'city': 
+    case 'community': 
       activePage.value = 3;
       break;
     case 'social': 
