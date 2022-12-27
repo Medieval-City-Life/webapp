@@ -65,7 +65,7 @@
 <script setup>
 import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
-import { useUserStore } from '../stores/user';
+import { useUserStore } from '../../stores/user';
 
 import AppButton from './AppButton.vue';
 

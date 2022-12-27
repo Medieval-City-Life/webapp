@@ -15,14 +15,14 @@
 </template>
 
 <script setup>
-import AppLoginForm from './components/AppLoginForm.vue';
-import AppDashboard from './components/AppDashboard.vue';
-import AppError from './components/AppError.vue';
+import AppLoginForm from './components/General/AppLoginForm.vue';
+import AppDashboard from './components/General/AppDashboard.vue';
+import AppError from './components/General/AppError.vue';
 import { storeToRefs } from 'pinia';
 import { useUserStore } from './stores/user';
 import { useErrorsStore } from './stores/useErrors';
 import './assets/tailwind.css';
-import AppHeader from './components/AppHeader.vue';
+import AppHeader from './components/Header/AppHeader.vue';
 
 const { loggedIn } = storeToRefs(useUserStore());
 const { message, code } = storeToRefs(useErrorsStore());

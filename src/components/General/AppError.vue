@@ -1,6 +1,6 @@
 <template>
   <div class="bg-red-800 ml-3 p-4 rounded-xl text-red-400 font-bold w-fit sticky top-[90vh]">
-    Etwas ging schief: {{message}} - Code: {{code}}
+    Code: {{code}} | {{message}}
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-  <div class="flex ml-3 mt-2 h-max bg-primary border-4 border-tok-700">
-    <AppInventoryItem v-for="item in myInventory" :item=item></AppInventoryItem>
+  <div class="flex flex-wrap h-max bg-primary border-4 border-tok-700">
+    <AppInventoryItem v-for="(item, index) in myInventory" :item=item :key="index" />
   </div>
 </template>
 

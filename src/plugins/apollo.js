@@ -8,8 +8,8 @@ import { useErrorsStore } from "../stores/useErrors";
 import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createHttpLink({
-  uri: "https://api.trade-of-kings.com/graphql",
-  // uri: 'http://localhost:4000/graphql'
+  // uri: "https://api.trade-of-kings.com/graphql",
+  uri: 'http://localhost:4000/graphql'
 });
 
 const errorHandler = onError(({ graphQLErrors }) => {

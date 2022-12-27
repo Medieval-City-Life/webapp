@@ -8,4 +8,4 @@ import './assets/tailwind.css'
 createApp(App)
   .provide(DefaultApolloClient, apolloClient)
   .use(createPinia())
-  .mount("#app");
+  .mount("#app")

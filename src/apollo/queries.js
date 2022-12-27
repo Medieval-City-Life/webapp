@@ -35,3 +35,22 @@ export const getMyCommunity = gql`
     }
   }
 `;
+
+export const getBuildings = gql`
+  query {
+    getBuildings {
+        name
+        level
+        owner {
+            name
+        }
+        products {
+            itemDef {
+                name
+            }
+            last_collected
+            rate
+        }
+    }
+}
+`

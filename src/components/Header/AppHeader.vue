@@ -13,10 +13,10 @@
 </template>
 
 <script setup>
-import { useUserStore } from '../stores/user';
+import { useUserStore } from '../../stores/user';
 import { storeToRefs } from 'pinia';
 
-import AppButton from './AppButton.vue';
+import AppButton from '../General/AppButton.vue';
 
 const { user } = storeToRefs(useUserStore());
 const { logout } = useUserStore();
@@ -28,7 +28,7 @@ const handleLogoutClick = () => {
 
 <style>
   .bgImage {
-    background-image: url('../assets/header-bg.jpg');
+    background-image: url('../../assets/header-bg.jpg');
   }
 
   .blackOpacity {

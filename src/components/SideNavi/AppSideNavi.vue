@@ -1,6 +1,6 @@
 <template>
-  <div class="bgImg mt-2 ml-2 border-4 border-tok-700 shadow-2xl">
-    <div class="h-[85vh] w-[15vw]">
+  <div class="bgImg border-r-4 border-tok-700 shadow-2xl">
+    <div class="h-[90vh] w-[15vw]">
       <AppSideNaviItem :class="[activePage === 1 ? 'bg-primary border-4' : 'hover:bg-primary border-2']" @click="btnClicked('profile')">Profil</AppSideNaviItem>
       <AppSideNaviItem :class="[activePage === 2 ? 'bg-primary border-4' : 'hover:bg-primary border-2']" @click="btnClicked('inventory')">Inventar</AppSideNaviItem>
       <AppSideNaviItem :class="[activePage === 3 ? 'bg-primary border-4' : 'hover:bg-primary border-2']" @click="btnClicked('community')">Gemeinschaft</AppSideNaviItem>
@@ -45,7 +45,7 @@ const btnClicked = (target) => {
 
 <style scope>
 .bgImg {
-  background-image: url('../assets/stone-wall.jpg');
+  background-image: url('../../assets/stone-wall.jpg');
 }
 
 .active {
